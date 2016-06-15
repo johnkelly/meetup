@@ -11,5 +11,9 @@ defmodule Meetup.Router do
     scope "/v1", V1, as: :v1 do
       resources "/orders", OrderController, only: [:index, :create, :show]
     end
+
+    scope "/v2", V2, as: :v2 do
+      resources "/orders", OrderController, only: [:index, :create, :show]
+    end
  end
 end
