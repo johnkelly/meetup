@@ -5,7 +5,11 @@ defmodule Meetup.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", Meetup do
+  scope "/", Meetup do
     pipe_through :api
-  end
+
+    scope "/v1", V1, as: :v1 do
+      resources "/orders", OrderController, only: [:index, :create, :show]
+    end
+ end
 end

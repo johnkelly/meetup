@@ -26,6 +26,7 @@ defmodule Meetup.ConnCase do
       import Ecto.Query, only: [from: 1, from: 2]
 
       import Meetup.Router.Helpers
+      import Meetup.Factory
 
       # The default endpoint for testing
       @endpoint Meetup.Endpoint
